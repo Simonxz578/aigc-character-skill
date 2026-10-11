@@ -1,0 +1,71 @@
+{
+  "schema_version": 1,
+  "spec": {
+    "width": 720,
+    "height": 1280,
+    "fps": 30,
+    "duration": 60
+  },
+  "shots": [
+    {
+      "id": "01",
+      "file": "inputs/shot_01.mp4",
+      "duration": 10,
+      "trim_start": 0
+    },
+    {
+      "id": "02",
+      "file": "inputs/shot_02.mp4",
+      "duration": 10,
+      "trim_start": 0
+    },
+    {
+      "id": "03",
+      "file": "inputs/shot_03.mp4",
+      "duration": 15,
+      "trim_start": 0
+    },
+    {
+      "id": "04",
+      "file": "inputs/shot_04.mp4",
+      "duration": 15,
+      "trim_start": 0
+    },
+    {
+      "id": "05",
+      "file": "inputs/shot_05.mp4",
+      "duration": 10,
+      "trim_start": 0
+    }
+  ],
+  "audio": {
+    "file": "inputs/song_60s.mp3",
+    "mode": "mix_generated",
+    "master_gain_db": -1,
+    "generated_gain_db": -24,
+    "boundary_fade_sec": 0.2,
+    "max_decoded_peak_dbfs": -1.5
+  },
+  "title": {
+    "start": 0,
+    "end": 4,
+    "lines": [
+      "贵妃醉酒",
+      "The Drunken Beauty",
+      "导演：剑桥学长 Simon",
+      "制作：Seedance 2.5"
+    ]
+  },
+  "captions": [],
+  "fonts": {
+    "cjk": "/path/to/licensed-CJK-font.ttc",
+    "latin": "/path/to/licensed-English-font.ttf"
+  },
+  "caption_backend": "auto",
+  "output_dir": "outputs/guifei-finish",
+  "review": {
+    "lyrics": "needs_actual_audio_transcription_and_review",
+    "listening": "not_verified",
+    "character_identity": "review_generated_clips"
+  }
+}

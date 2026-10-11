@@ -1,15 +1,29 @@
 ---
 name: aigc-character-skill
-description: 将一句人物剧情需求转成自然中文角色表演与视频提示词，具体控制动机、眼神、微表情、呼吸、肢体、对话、镜头与情绪时间轴。用于单人或多人角色导演、古风、恋爱、日漫战斗及既有提示词的局部修订；交付可复制的文字，不执行视频生成。
+description: 编写中文人物表演提示词，制作或修订以角色为核心的AI视频、短剧和MV。按需求调用角色连续性、Seedance 2.5、多镜头生产、本地配音与ComfyUI、HyperFrames、Remotion和确定性剪辑字幕质检；已有素材可直接完成MP4后期。
 license: MIT
 metadata:
-  version: "1.0.0"
+  version: "2.0.0"
   language: "zh-CN"
 ---
 
 # AIGC character skill
 
-把人物的目标、克制与选择写成可以看见、可以演出的动作。默认直接给一份可粘贴的中文 Prompt，不解释内部推理，不调用生成服务。
+把人物的目标、克制与选择写成可以看见、可以演出的动作。只要提示词时，直接交付可复制正文；明确要求制作、改片或合成时，继续到可检查的媒体交付。实际执行取决于可用工具与用户授权。
+
+## 工作模式
+
+| 请求 | 执行入口 |
+|---|---|
+| 写或局部改提示词 | 下文原有导演流程；不顺带生成视频 |
+| AI人物短片、短剧、MV | [生产流程](references/production/workflow.md)，建立角色母版与逐镜头状态 |
+| 用小云雀/Seedance 2.5生成或准备画布 | [Seedance 2.5](references/production/seedance-2-5.md)，核实当前界面、参考关系与提交权限 |
+| 拼接已有镜头、配音、修声、加字幕 | [声音与后期](references/production/audio-finishing.md)，优先保留已认可的媒体 |
+| HTML/GSAP动画或React视频 | [六套集成](references/production/integrations.md)，选择HyperFrames或Remotion运行时 |
+| 本地人物连续运动试验 | [本地生成](references/production/local-video.md)，先通过一个短镜头，再按用户要求批量 |
+| 需要通用产品/项目规格 | [人物视频PRD](docs/PRD-character-video-production.md)；实作参考[贵妃醉酒案例](docs/PRD-guifei-mv.md) |
+
+六套能力的固定提交和全部公开模块在 `config/upstream-skills.lock.json`。运行 `python3 scripts/integrations.py resolve --module NAME` 找到已缓存入口；缺失时按需要 `sync --family FAMILY`。安装器只获取方法资料，不启用外部付费服务或安装生成模型。按当前需求读相应模块和引用；不一次加载196份正文。用户既有策略与授权优先，不因上游示例重新要求确认已确定的剪辑方案。
 
 ## 输入与范围
 
@@ -17,7 +31,7 @@ metadata:
 
 缺少非关键项时作节制的默认选择：短小情绪需求通常 10 秒、standard、无对白；不主动加哭泣、亲吻、告白、暴力或换装。若用户只要短词，采用 concise。只有无法合理推断的关键事实才问一项；未提供的参考图不可声称已经分析。引用参考时锁定已知身份、服装、发型、初始姿态和空间关系，再让动作正常发展。
 
-若要求修改旧词，先确定改动范围，保留其他段落与台词原文，尽量逐字保留无关内容。若局部修改导致时间矛盾，仅修正必要关联并简述原因（prompt_only 除外）。请求真实视频时说明本 skill 产出文字，转交可用的视频制作工作流，不能假称已渲染。
+若要求修改旧词，先确定改动范围，保留其他段落与台词原文，尽量逐字保留无关内容。若局部修改导致时间矛盾，仅修正必要关联并简述原因（prompt_only 除外）。请求真实视频时使用生产模式，区分准备完成、生成已提交、文件已返回和验收通过；没有实际文件不能声称已渲染。
 
 ## 按需读取
 

@@ -1,0 +1,47 @@
+{
+  "date": "2026-10-11",
+  "version": "2.0.0",
+  "automated_tests": {
+    "count": 50,
+    "result": "PASS",
+    "environment": "macOS arm64 / Python3.12 / FFmpeg9.0.1 / MCP1.30.0 / Pillow12.3.0 / NumPy2.5.4"
+  },
+  "external_sources": {
+    "modules": 196,
+    "all_designated_entrypoints_present": true,
+    "family_counts": {
+      "hyperframes": 21,
+      "video-use": 1,
+      "remotion": 12,
+      "generative-media": 153,
+      "videocut": 8,
+      "seedance-2-5": 1
+    },
+    "runtime_execution_not_implied": true
+  },
+  "voice_smoke": {
+    "status": "synthesized",
+    "duration_sec": 0.683125,
+    "sample_rate": 48000,
+    "channels": 2,
+    "time_stretch": false,
+    "human_listening_review": false
+  },
+  "mcp_smoke": {
+    "initialized": true,
+    "tools": [
+      "local_voice_health",
+      "synthesize_local_voice",
+      "local_video_health",
+      "submit_local_video",
+      "local_video_status"
+    ],
+    "paid_node_rejected": true,
+    "health_callable": true,
+    "native_runtime_in_this_test_env": "not_installed",
+    "provider_generation_executed": false
+  },
+  "new_cloud_generation_calls": 0,
+  "human_or_independent_agent_media_review": false,
+  "historical_guifei_summary": "examples/guifei/recorded-qa.json"
+}

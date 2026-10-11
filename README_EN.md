@@ -1,33 +1,46 @@
-# AIGC character skill
+# AIGC character skill 2.0
 
-A Chinese-first character acting director skill: turn a short story request into a copy-ready video prompt with motivation, gaze, breath, gestures, prop ownership, dialogue and a continuous timeline.
+Chinese character acting direction plus an optional end-to-end character-video production workflow. Quick prompt requests stay text-only; explicit production or finishing requests continue to reviewable local media.
 
-This is a text-authoring skill, **not a video generation model**. It needs no GPU, API key or paid service. Platform labels such as Seedance 2.5/2.0, Kling, Veo and Sora describe prompt targets, not verified current capabilities.
+## Included
 
-## Install in Codex
+- [Character-video product PRD](docs/PRD-character-video-production.md) and [The Drunken Beauty case study](docs/PRD-guifei-mv.md).
+- Six integrated skill families: HyperFrames, video-use, Remotion Skills, Generative Media Skills, VideoCut/chengfeng-videocut-skills and a dedicated Seedance 2.5 skill. [196 pinned public module entries](config/upstream-skills.lock.json); fetch locally on demand.
+- Working optional VOICEVOX and loopback-only ComfyUI CLI/MCP adapters migrated from anime-video-skill.
+- Configurable FFmpeg finishing: exact-duration concatenation, CFR, master audio or quiet generated-audio mixing, titles, bilingual ASS/SRT, deterministic captions, decoded AAC peak correction and technical QA.
+- All original acting references, ten scenarios/twelve prompts and prompt validation retained.
 
-With an absent destination directory:
+The skill is not a standalone generation model. Provider accounts, models and runtimes are separate. Prompt/source installation is not runtime validation or perceptual acceptance.
+
+## Install
 
 ```bash
-mkdir -p ~/.codex/skills
 git clone https://github.com/Simonxz578/aigc-character-skill.git ~/.codex/skills/aigc-character-skill
 ```
 
-Start a new Codex session. Use `$aigc-character-skill` followed by a natural-language scene. It also supports implicit discovery. For a custom CODEX_HOME, install under its `skills/` directory. Review local modifications before updating with `git pull --ff-only`.
-
-Examples: a restrained 15-second emotional performance; a two-person notebook handoff; revise only one character's vocal delivery while preserving everything else.
-
-## Contents
-
-Skill entry point, UI metadata, nine focused references, ten original examples (twelve copy-ready prompts), a standard-library validator and regression tests. Default output is natural Chinese prose. Concise, standard, cinematic and custom length modes support seven output styles.
+Preserve local changes before updating. Start a new session and use `$aigc-character-skill`. Prompt checks require Python3.9+; optional media tools require Python3.10+, FFmpeg/ffprobe and their stated dependencies.
 
 ```bash
-python3 scripts/validate_prompt.py prompt.txt --duration 15 --max-chars 5000 --json
-python3 -m unittest discover -s tests -v
+python -m pip install -e '.[render]'
+python scripts/integrations.py sync --family all
+python scripts/integrations.py resolve --module seedance-2-5
+aigc-character-finish project/production.json --dry-run
+aigc-character-finish project/production.json
+# Optional official SDK wrapper:
+python -m pip install -e '.[mcp,render]'
+aigc-character-mcp
 ```
 
-Python 3.9+; no dependencies. Counts Unicode code points including spaces and newlines. Semantic warnings exit0; input/argument failures exit2. Heuristics do not prove acting quality or model compliance. See [Chinese documentation](README.md) and [forward-test records](tests/forward-results.md).
+The source-cache installer pins SHAs, preserves relative references, never overwrites unknown caches, executes no upstream installers and enables no paid provider. External sources are not redistributed as MIT.
 
-v1.0.0 local verification: 44 automated tests passed, skill frontmatter validated, and 12 independent natural-language calls across 10 groups completed. Missing-reference cases test text handling only; the overlong recital case tests conflict handling rather than fulfilling an impossible 15-second constraint.
+Relative media paths resolve from the configuration file. [Example configuration](examples/guifei/production.json) deliberately excludes song lyrics and media; supply your own files, fonts and checked caption text. ASS is burned directly when libass is present; auto mode explicitly records deterministic Pillow-plate fallback. New outputs refuse to overwrite an existing final by default.
 
-MIT applies to original repository text and code. No private references, transcripts, portraits, voiceprints or third-party media are distributed. Layout informed by [Agent Skills](https://agentskills.io/specification) and [OpenAI's skills documentation](https://developers.openai.com/plugins/build/skills).
+## Verification and limitations
+
+```bash
+PYTHONPATH=src python3 -m unittest discover -s tests -v
+```
+
+[Release validation](docs/release-validation-v2.md) distinguishes actual local render/voice/source checks from untested external runtimes. The historical Guifei output passed technical checks; sung words and the subjective music mix remain not listening-verified. Wan5B has not passed character-motion acceptance, and Wan14B/LTX2.5 remain untested.
+
+See the [Chinese documentation](README.md), [migration record](docs/migration-from-anime.md) and [third-party notices](THIRD_PARTY_NOTICES.md). Original code/docs are MIT; songs, photos, generated clips, weights and voiceprints are excluded. Native model and runtime licenses remain independent.

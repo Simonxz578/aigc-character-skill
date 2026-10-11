@@ -1,6 +1,6 @@
 interface:
   display_name: "AIGC character skill"
-  short_description: "将一句人物剧情转成中文角色表演提示词，细化眼神、呼吸、动作和情绪时间轴"
-  default_prompt: "使用 $aigc-character-skill，把我的人物剧情写成可直接复制的中文视频表演提示词。"
+  short_description: "中文人物表演导演与AI视频制作：母版连续性、配音、字幕、剪辑和成片质检"
+  default_prompt: "使用 $aigc-character-skill，按我的人物剧情或已有素材完成提示词、视频制作或局部修订，并沿用已确定的角色与交付规格。"
 policy:
   allow_implicit_invocation: true

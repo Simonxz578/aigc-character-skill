@@ -1,0 +1,1075 @@
+{
+  "schema_version": 1,
+  "checked_on": "2026-10-11",
+  "mode": "versioned_external_source_integration",
+  "repositories": [
+    {
+      "family": "hyperframes",
+      "repository": "heygen-com/hyperframes",
+      "commit": "44e5a47e09a14f792126b4ec6a3d9f7b3b7c346e",
+      "license_spdx": "Apache-2.0",
+      "license_files": [
+        "LICENSE",
+        "packages/producer/tests/hdr-regression/NOTICE.md",
+        "packages/producer/tests/vfr-screen-recording/NOTICE.md",
+        "skills/talking-head-recut/NOTICE.md"
+      ],
+      "redistributed": false,
+      "modules": [
+        {
+          "name": "embedded-captions",
+          "path": "skills/embedded-captions",
+          "entrypoint": "skills/embedded-captions/SKILL.md"
+        },
+        {
+          "name": "faceless-explainer",
+          "path": "skills/faceless-explainer",
+          "entrypoint": "skills/faceless-explainer/SKILL.md"
+        },
+        {
+          "name": "figma",
+          "path": "skills/figma",
+          "entrypoint": "skills/figma/SKILL.md"
+        },
+        {
+          "name": "general-video",
+          "path": "skills/general-video",
+          "entrypoint": "skills/general-video/SKILL.md"
+        },
+        {
+          "name": "hyperframes-animation",
+          "path": "skills/hyperframes-animation",
+          "entrypoint": "skills/hyperframes-animation/SKILL.md"
+        },
+        {
+          "name": "hyperframes-audio",
+          "path": "skills/hyperframes-audio",
+          "entrypoint": "skills/hyperframes-audio/SKILL.md"
+        },
+        {
+          "name": "hyperframes-cli",
+          "path": "skills/hyperframes-cli",
+          "entrypoint": "skills/hyperframes-cli/SKILL.md"
+        },
+        {
+          "name": "hyperframes-core",
+          "path": "skills/hyperframes-core",
+          "entrypoint": "skills/hyperframes-core/SKILL.md"
+        },
+        {
+          "name": "hyperframes-creative",
+          "path": "skills/hyperframes-creative",
+          "entrypoint": "skills/hyperframes-creative/SKILL.md"
+        },
+        {
+          "name": "hyperframes-keyframes",
+          "path": "skills/hyperframes-keyframes",
+          "entrypoint": "skills/hyperframes-keyframes/SKILL.md"
+        },
+        {
+          "name": "hyperframes-registry",
+          "path": "skills/hyperframes-registry",
+          "entrypoint": "skills/hyperframes-registry/SKILL.md"
+        },
+        {
+          "name": "hyperframes-studio",
+          "path": "skills/hyperframes-studio",
+          "entrypoint": "skills/hyperframes-studio/SKILL.md"
+        },
+        {
+          "name": "hyperframes",
+          "path": "skills/hyperframes",
+          "entrypoint": "skills/hyperframes/SKILL.md"
+        },
+        {
+          "name": "media-use",
+          "path": "skills/media-use",
+          "entrypoint": "skills/media-use/SKILL.md"
+        },
+        {
+          "name": "motion-graphics",
+          "path": "skills/motion-graphics",
+          "entrypoint": "skills/motion-graphics/SKILL.md"
+        },
+        {
+          "name": "music-to-video",
+          "path": "skills/music-to-video",
+          "entrypoint": "skills/music-to-video/SKILL.md"
+        },
+        {
+          "name": "pr-to-video",
+          "path": "skills/pr-to-video",
+          "entrypoint": "skills/pr-to-video/SKILL.md"
+        },
+        {
+          "name": "product-launch-video",
+          "path": "skills/product-launch-video",
+          "entrypoint": "skills/product-launch-video/SKILL.md"
+        },
+        {
+          "name": "remotion-to-hyperframes",
+          "path": "skills/remotion-to-hyperframes",
+          "entrypoint": "skills/remotion-to-hyperframes/SKILL.md"
+        },
+        {
+          "name": "slideshow",
+          "path": "skills/slideshow",
+          "entrypoint": "skills/slideshow/SKILL.md"
+        },
+        {
+          "name": "talking-head-recut",
+          "path": "skills/talking-head-recut",
+          "entrypoint": "skills/talking-head-recut/SKILL.md"
+        }
+      ],
+      "runtime_state": "not_installed_by_manifest"
+    },
+    {
+      "family": "video-use",
+      "repository": "browser-use/video-use",
+      "commit": "43cfc566833548093455c9d4a46bd69913b7e552",
+      "license_spdx": "MIT",
+      "license_files": [
+        "LICENSE"
+      ],
+      "redistributed": false,
+      "modules": [
+        {
+          "name": "video-use",
+          "path": ".",
+          "entrypoint": "SKILL.md"
+        }
+      ],
+      "runtime_state": "not_installed_by_manifest"
+    },
+    {
+      "family": "remotion",
+      "repository": "remotion-dev/skills",
+      "commit": "32b241b97f4e0e4ab61fe9a41b05e6e64503f8c5",
+      "license_spdx": null,
+      "license_files": [],
+      "redistributed": false,
+      "modules": [
+        {
+          "name": "remotion-best-practices",
+          "path": "skills/remotion-best-practices",
+          "entrypoint": "skills/remotion-best-practices/SKILL.md"
+        },
+        {
+          "name": "remotion-captions",
+          "path": "skills/remotion-captions",
+          "entrypoint": "skills/remotion-captions/SKILL.md"
+        },
+        {
+          "name": "remotion-create",
+          "path": "skills/remotion-create",
+          "entrypoint": "skills/remotion-create/SKILL.md"
+        },
+        {
+          "name": "remotion-docs",
+          "path": "skills/remotion-docs",
+          "entrypoint": "skills/remotion-docs/SKILL.md"
+        },
+        {
+          "name": "remotion-interactivity",
+          "path": "skills/remotion-interactivity",
+          "entrypoint": "skills/remotion-interactivity/SKILL.md"
+        },
+        {
+          "name": "remotion-maps",
+          "path": "skills/remotion-maps",
+          "entrypoint": "skills/remotion-maps/SKILL.md"
+        },
+        {
+          "name": "remotion-markup",
+          "path": "skills/remotion-markup",
+          "entrypoint": "skills/remotion-markup/SKILL.md"
+        },
+        {
+          "name": "remotion-multimedia",
+          "path": "skills/remotion-multimedia",
+          "entrypoint": "skills/remotion-multimedia/SKILL.md"
+        },
+        {
+          "name": "remotion-render",
+          "path": "skills/remotion-render",
+          "entrypoint": "skills/remotion-render/SKILL.md"
+        },
+        {
+          "name": "remotion-saas",
+          "path": "skills/remotion-saas",
+          "entrypoint": "skills/remotion-saas/SKILL.md"
+        },
+        {
+          "name": "remotion-studio",
+          "path": "skills/remotion-studio",
+          "entrypoint": "skills/remotion-studio/SKILL.md"
+        },
+        {
+          "name": "remotion-upgrade",
+          "path": "skills/remotion-upgrade",
+          "entrypoint": "skills/remotion-upgrade/SKILL.md"
+        }
+      ],
+      "runtime_state": "not_installed_by_manifest"
+    },
+    {
+      "family": "generative-media",
+      "repository": "calesthio/generative-media-skills",
+      "commit": "8c85352d5d75d4dcbe58480bd138e37b9742bab1",
+      "license_spdx": "MIT",
+      "license_files": [
+        "LICENSE"
+      ],
+      "redistributed": false,
+      "modules": [
+        {
+          "name": "3d-asset-production",
+          "path": "skills/production/3d-craft/3d-asset-production",
+          "entrypoint": "skills/production/3d-craft/3d-asset-production/SKILL.md"
+        },
+        {
+          "name": "neural-reality-capture",
+          "path": "skills/production/3d-craft/neural-reality-capture",
+          "entrypoint": "skills/production/3d-craft/neural-reality-capture/SKILL.md"
+        },
+        {
+          "name": "audio-mixing-mastering",
+          "path": "skills/production/audio-craft/audio-mixing-mastering",
+          "entrypoint": "skills/production/audio-craft/audio-mixing-mastering/SKILL.md"
+        },
+        {
+          "name": "captions-media-accessibility",
+          "path": "skills/production/audio-craft/captions-media-accessibility",
+          "entrypoint": "skills/production/audio-craft/captions-media-accessibility/SKILL.md"
+        },
+        {
+          "name": "dialogue-editing-adr",
+          "path": "skills/production/audio-craft/dialogue-editing-adr",
+          "entrypoint": "skills/production/audio-craft/dialogue-editing-adr/SKILL.md"
+        },
+        {
+          "name": "localization-dubbing-production",
+          "path": "skills/production/audio-craft/localization-dubbing-production",
+          "entrypoint": "skills/production/audio-craft/localization-dubbing-production/SKILL.md"
+        },
+        {
+          "name": "music-supervision-scoring",
+          "path": "skills/production/audio-craft/music-supervision-scoring",
+          "entrypoint": "skills/production/audio-craft/music-supervision-scoring/SKILL.md"
+        },
+        {
+          "name": "sound-design-foley",
+          "path": "skills/production/audio-craft/sound-design-foley",
+          "entrypoint": "skills/production/audio-craft/sound-design-foley/SKILL.md"
+        },
+        {
+          "name": "video-to-audio-foley",
+          "path": "skills/production/audio-craft/video-to-audio-foley",
+          "entrypoint": "skills/production/audio-craft/video-to-audio-foley/SKILL.md"
+        },
+        {
+          "name": "anime-animation-production",
+          "path": "skills/production/content-formats/anime-animation-production",
+          "entrypoint": "skills/production/content-formats/anime-animation-production/SKILL.md"
+        },
+        {
+          "name": "audiobook-production",
+          "path": "skills/production/content-formats/audiobook-production",
+          "entrypoint": "skills/production/content-formats/audiobook-production/SKILL.md"
+        },
+        {
+          "name": "avatar-spokesperson-production",
+          "path": "skills/production/content-formats/avatar-spokesperson-production",
+          "entrypoint": "skills/production/content-formats/avatar-spokesperson-production/SKILL.md"
+        },
+        {
+          "name": "brand-launch-film-production",
+          "path": "skills/production/content-formats/brand-launch-film-production",
+          "entrypoint": "skills/production/content-formats/brand-launch-film-production/SKILL.md"
+        },
+        {
+          "name": "cinematic-trailer-production",
+          "path": "skills/production/content-formats/cinematic-trailer-production",
+          "entrypoint": "skills/production/content-formats/cinematic-trailer-production/SKILL.md"
+        },
+        {
+          "name": "documentary-montage-production",
+          "path": "skills/production/content-formats/documentary-montage-production",
+          "entrypoint": "skills/production/content-formats/documentary-montage-production/SKILL.md"
+        },
+        {
+          "name": "ecommerce-product-imagery",
+          "path": "skills/production/content-formats/ecommerce-product-imagery",
+          "entrypoint": "skills/production/content-formats/ecommerce-product-imagery/SKILL.md"
+        },
+        {
+          "name": "educational-animation-production",
+          "path": "skills/production/content-formats/educational-animation-production",
+          "entrypoint": "skills/production/content-formats/educational-animation-production/SKILL.md"
+        },
+        {
+          "name": "explainer-video-production",
+          "path": "skills/production/content-formats/explainer-video-production",
+          "entrypoint": "skills/production/content-formats/explainer-video-production/SKILL.md"
+        },
+        {
+          "name": "fashion-campaign-production",
+          "path": "skills/production/content-formats/fashion-campaign-production",
+          "entrypoint": "skills/production/content-formats/fashion-campaign-production/SKILL.md"
+        },
+        {
+          "name": "food-beverage-content-production",
+          "path": "skills/production/content-formats/food-beverage-content-production",
+          "entrypoint": "skills/production/content-formats/food-beverage-content-production/SKILL.md"
+        },
+        {
+          "name": "game-trailer-production",
+          "path": "skills/production/content-formats/game-trailer-production",
+          "entrypoint": "skills/production/content-formats/game-trailer-production/SKILL.md"
+        },
+        {
+          "name": "immersive-spatial-video-production",
+          "path": "skills/production/content-formats/immersive-spatial-video-production",
+          "entrypoint": "skills/production/content-formats/immersive-spatial-video-production/SKILL.md"
+        },
+        {
+          "name": "livestream-event-production",
+          "path": "skills/production/content-formats/livestream-event-production",
+          "entrypoint": "skills/production/content-formats/livestream-event-production/SKILL.md"
+        },
+        {
+          "name": "music-video-production",
+          "path": "skills/production/content-formats/music-video-production",
+          "entrypoint": "skills/production/content-formats/music-video-production/SKILL.md"
+        },
+        {
+          "name": "podcast-production",
+          "path": "skills/production/content-formats/podcast-production",
+          "entrypoint": "skills/production/content-formats/podcast-production/SKILL.md"
+        },
+        {
+          "name": "product-ad-production",
+          "path": "skills/production/content-formats/product-ad-production",
+          "entrypoint": "skills/production/content-formats/product-ad-production/SKILL.md"
+        },
+        {
+          "name": "real-estate-content-production",
+          "path": "skills/production/content-formats/real-estate-content-production",
+          "entrypoint": "skills/production/content-formats/real-estate-content-production/SKILL.md"
+        },
+        {
+          "name": "saas-product-demo-production",
+          "path": "skills/production/content-formats/saas-product-demo-production",
+          "entrypoint": "skills/production/content-formats/saas-product-demo-production/SKILL.md"
+        },
+        {
+          "name": "screen-demo-production",
+          "path": "skills/production/content-formats/screen-demo-production",
+          "entrypoint": "skills/production/content-formats/screen-demo-production/SKILL.md"
+        },
+        {
+          "name": "social-short-production",
+          "path": "skills/production/content-formats/social-short-production",
+          "entrypoint": "skills/production/content-formats/social-short-production/SKILL.md"
+        },
+        {
+          "name": "talking-head-podcast-recut",
+          "path": "skills/production/content-formats/talking-head-podcast-recut",
+          "entrypoint": "skills/production/content-formats/talking-head-podcast-recut/SKILL.md"
+        },
+        {
+          "name": "ugc-ad-production",
+          "path": "skills/production/content-formats/ugc-ad-production",
+          "entrypoint": "skills/production/content-formats/ugc-ad-production/SKILL.md"
+        },
+        {
+          "name": "2d-character-rig-animation",
+          "path": "skills/production/creative-direction/2d-character-rig-animation",
+          "entrypoint": "skills/production/creative-direction/2d-character-rig-animation/SKILL.md"
+        },
+        {
+          "name": "character-design-continuity",
+          "path": "skills/production/creative-direction/character-design-continuity",
+          "entrypoint": "skills/production/creative-direction/character-design-continuity/SKILL.md"
+        },
+        {
+          "name": "cinematic-shot-direction",
+          "path": "skills/production/creative-direction/cinematic-shot-direction",
+          "entrypoint": "skills/production/creative-direction/cinematic-shot-direction/SKILL.md"
+        },
+        {
+          "name": "lighting-direction",
+          "path": "skills/production/creative-direction/lighting-direction",
+          "entrypoint": "skills/production/creative-direction/lighting-direction/SKILL.md"
+        },
+        {
+          "name": "performance-direction",
+          "path": "skills/production/creative-direction/performance-direction",
+          "entrypoint": "skills/production/creative-direction/performance-direction/SKILL.md"
+        },
+        {
+          "name": "precise-video-description",
+          "path": "skills/production/creative-direction/precise-video-description",
+          "entrypoint": "skills/production/creative-direction/precise-video-description/SKILL.md"
+        },
+        {
+          "name": "production-design-direction",
+          "path": "skills/production/creative-direction/production-design-direction",
+          "entrypoint": "skills/production/creative-direction/production-design-direction/SKILL.md"
+        },
+        {
+          "name": "storyboard-previsualization",
+          "path": "skills/production/creative-direction/storyboard-previsualization",
+          "entrypoint": "skills/production/creative-direction/storyboard-previsualization/SKILL.md"
+        },
+        {
+          "name": "visual-style-direction",
+          "path": "skills/production/creative-direction/visual-style-direction",
+          "entrypoint": "skills/production/creative-direction/visual-style-direction/SKILL.md"
+        },
+        {
+          "name": "asset-continuity-management",
+          "path": "skills/production/governance-delivery/asset-continuity-management",
+          "entrypoint": "skills/production/governance-delivery/asset-continuity-management/SKILL.md"
+        },
+        {
+          "name": "generated-media-qa",
+          "path": "skills/production/governance-delivery/generated-media-qa",
+          "entrypoint": "skills/production/governance-delivery/generated-media-qa/SKILL.md"
+        },
+        {
+          "name": "media-provenance-rights",
+          "path": "skills/production/governance-delivery/media-provenance-rights",
+          "entrypoint": "skills/production/governance-delivery/media-provenance-rights/SKILL.md"
+        },
+        {
+          "name": "media-qc-delivery",
+          "path": "skills/production/governance-delivery/media-qc-delivery",
+          "entrypoint": "skills/production/governance-delivery/media-qc-delivery/SKILL.md"
+        },
+        {
+          "name": "reference-media-analysis",
+          "path": "skills/production/governance-delivery/reference-media-analysis",
+          "entrypoint": "skills/production/governance-delivery/reference-media-analysis/SKILL.md"
+        },
+        {
+          "name": "video-description-oversight",
+          "path": "skills/production/governance-delivery/video-description-oversight",
+          "entrypoint": "skills/production/governance-delivery/video-description-oversight/SKILL.md"
+        },
+        {
+          "name": "color-grading-finishing",
+          "path": "skills/production/post-production/color-grading-finishing",
+          "entrypoint": "skills/production/post-production/color-grading-finishing/SKILL.md"
+        },
+        {
+          "name": "editing-montage",
+          "path": "skills/production/post-production/editing-montage",
+          "entrypoint": "skills/production/post-production/editing-montage/SKILL.md"
+        },
+        {
+          "name": "motion-graphics-direction",
+          "path": "skills/production/post-production/motion-graphics-direction",
+          "entrypoint": "skills/production/post-production/motion-graphics-direction/SKILL.md"
+        },
+        {
+          "name": "still-image-retouching-finishing",
+          "path": "skills/production/post-production/still-image-retouching-finishing",
+          "entrypoint": "skills/production/post-production/still-image-retouching-finishing/SKILL.md"
+        },
+        {
+          "name": "title-kinetic-typography",
+          "path": "skills/production/post-production/title-kinetic-typography",
+          "entrypoint": "skills/production/post-production/title-kinetic-typography/SKILL.md"
+        },
+        {
+          "name": "vfx-compositing",
+          "path": "skills/production/post-production/vfx-compositing",
+          "entrypoint": "skills/production/post-production/vfx-compositing/SKILL.md"
+        },
+        {
+          "name": "audio-reactive-video-composition",
+          "path": "skills/production/runtime-assembly/audio-reactive-video-composition",
+          "entrypoint": "skills/production/runtime-assembly/audio-reactive-video-composition/SKILL.md"
+        },
+        {
+          "name": "comfyui-media-workflows",
+          "path": "skills/production/runtime-assembly/comfyui-media-workflows",
+          "entrypoint": "skills/production/runtime-assembly/comfyui-media-workflows/SKILL.md"
+        },
+        {
+          "name": "d3-animated-data-visualization",
+          "path": "skills/production/runtime-assembly/d3-animated-data-visualization",
+          "entrypoint": "skills/production/runtime-assembly/d3-animated-data-visualization/SKILL.md"
+        },
+        {
+          "name": "ffmpeg-media-finishing",
+          "path": "skills/production/runtime-assembly/ffmpeg-media-finishing",
+          "entrypoint": "skills/production/runtime-assembly/ffmpeg-media-finishing/SKILL.md"
+        },
+        {
+          "name": "gsap-animation-composition",
+          "path": "skills/production/runtime-assembly/gsap-animation-composition",
+          "entrypoint": "skills/production/runtime-assembly/gsap-animation-composition/SKILL.md"
+        },
+        {
+          "name": "hyperframes-video-composition",
+          "path": "skills/production/runtime-assembly/hyperframes-video-composition",
+          "entrypoint": "skills/production/runtime-assembly/hyperframes-video-composition/SKILL.md"
+        },
+        {
+          "name": "lottie-animation-delivery",
+          "path": "skills/production/runtime-assembly/lottie-animation-delivery",
+          "entrypoint": "skills/production/runtime-assembly/lottie-animation-delivery/SKILL.md"
+        },
+        {
+          "name": "manim-explainer-animation",
+          "path": "skills/production/runtime-assembly/manim-explainer-animation",
+          "entrypoint": "skills/production/runtime-assembly/manim-explainer-animation/SKILL.md"
+        },
+        {
+          "name": "procedural-canvas-animation",
+          "path": "skills/production/runtime-assembly/procedural-canvas-animation",
+          "entrypoint": "skills/production/runtime-assembly/procedural-canvas-animation/SKILL.md"
+        },
+        {
+          "name": "remotion-video-composition",
+          "path": "skills/production/runtime-assembly/remotion-video-composition",
+          "entrypoint": "skills/production/runtime-assembly/remotion-video-composition/SKILL.md"
+        },
+        {
+          "name": "threejs-scene-composition",
+          "path": "skills/production/runtime-assembly/threejs-scene-composition",
+          "entrypoint": "skills/production/runtime-assembly/threejs-scene-composition/SKILL.md"
+        },
+        {
+          "name": "virtual-production-icvfx",
+          "path": "skills/production/runtime-assembly/virtual-production-icvfx",
+          "entrypoint": "skills/production/runtime-assembly/virtual-production-icvfx/SKILL.md"
+        },
+        {
+          "name": "meshy-3d",
+          "path": "skills/providers/3d-generation/meshy-3d",
+          "entrypoint": "skills/providers/3d-generation/meshy-3d/SKILL.md"
+        },
+        {
+          "name": "tencent-hunyuan3d",
+          "path": "skills/providers/3d-generation/tencent-hunyuan3d",
+          "entrypoint": "skills/providers/3d-generation/tencent-hunyuan3d/SKILL.md"
+        },
+        {
+          "name": "tripo-3d",
+          "path": "skills/providers/3d-generation/tripo-3d",
+          "entrypoint": "skills/providers/3d-generation/tripo-3d/SKILL.md"
+        },
+        {
+          "name": "nvidia-maxine-audio-effects",
+          "path": "skills/providers/audio-enhancement/nvidia-maxine-audio-effects",
+          "entrypoint": "skills/providers/audio-enhancement/nvidia-maxine-audio-effects/SKILL.md"
+        },
+        {
+          "name": "d-id-avatar-video",
+          "path": "skills/providers/avatar-video/d-id-avatar-video",
+          "entrypoint": "skills/providers/avatar-video/d-id-avatar-video/SKILL.md"
+        },
+        {
+          "name": "hedra-character-video",
+          "path": "skills/providers/avatar-video/hedra-character-video",
+          "entrypoint": "skills/providers/avatar-video/hedra-character-video/SKILL.md"
+        },
+        {
+          "name": "heygen-avatar-video",
+          "path": "skills/providers/avatar-video/heygen-avatar-video",
+          "entrypoint": "skills/providers/avatar-video/heygen-avatar-video/SKILL.md"
+        },
+        {
+          "name": "synthesia-avatar-video",
+          "path": "skills/providers/avatar-video/synthesia-avatar-video",
+          "entrypoint": "skills/providers/avatar-video/synthesia-avatar-video/SKILL.md"
+        },
+        {
+          "name": "tavus-replica-video",
+          "path": "skills/providers/avatar-video/tavus-replica-video",
+          "entrypoint": "skills/providers/avatar-video/tavus-replica-video/SKILL.md"
+        },
+        {
+          "name": "adobe-firefly-image",
+          "path": "skills/providers/image-generation/adobe-firefly-image",
+          "entrypoint": "skills/providers/image-generation/adobe-firefly-image/SKILL.md"
+        },
+        {
+          "name": "alibaba-image-models",
+          "path": "skills/providers/image-generation/alibaba-image-models",
+          "entrypoint": "skills/providers/image-generation/alibaba-image-models/SKILL.md"
+        },
+        {
+          "name": "amazon-nova-canvas",
+          "path": "skills/providers/image-generation/amazon-nova-canvas",
+          "entrypoint": "skills/providers/image-generation/amazon-nova-canvas/SKILL.md"
+        },
+        {
+          "name": "black-forest-labs-flux",
+          "path": "skills/providers/image-generation/black-forest-labs-flux",
+          "entrypoint": "skills/providers/image-generation/black-forest-labs-flux/SKILL.md"
+        },
+        {
+          "name": "bria-fibo-image",
+          "path": "skills/providers/image-generation/bria-fibo-image",
+          "entrypoint": "skills/providers/image-generation/bria-fibo-image/SKILL.md"
+        },
+        {
+          "name": "bytedance-seedream",
+          "path": "skills/providers/image-generation/bytedance-seedream",
+          "entrypoint": "skills/providers/image-generation/bytedance-seedream/SKILL.md"
+        },
+        {
+          "name": "google-gemini-image",
+          "path": "skills/providers/image-generation/google-gemini-image",
+          "entrypoint": "skills/providers/image-generation/google-gemini-image/SKILL.md"
+        },
+        {
+          "name": "ideogram-image",
+          "path": "skills/providers/image-generation/ideogram-image",
+          "entrypoint": "skills/providers/image-generation/ideogram-image/SKILL.md"
+        },
+        {
+          "name": "image-generation-gateways",
+          "path": "skills/providers/image-generation/image-generation-gateways",
+          "entrypoint": "skills/providers/image-generation/image-generation-gateways/SKILL.md"
+        },
+        {
+          "name": "kling-kolors-image",
+          "path": "skills/providers/image-generation/kling-kolors-image",
+          "entrypoint": "skills/providers/image-generation/kling-kolors-image/SKILL.md"
+        },
+        {
+          "name": "leonardo-image",
+          "path": "skills/providers/image-generation/leonardo-image",
+          "entrypoint": "skills/providers/image-generation/leonardo-image/SKILL.md"
+        },
+        {
+          "name": "luma-photon",
+          "path": "skills/providers/image-generation/luma-photon",
+          "entrypoint": "skills/providers/image-generation/luma-photon/SKILL.md"
+        },
+        {
+          "name": "midjourney-image",
+          "path": "skills/providers/image-generation/midjourney-image",
+          "entrypoint": "skills/providers/image-generation/midjourney-image/SKILL.md"
+        },
+        {
+          "name": "openai-gpt-image",
+          "path": "skills/providers/image-generation/openai-gpt-image",
+          "entrypoint": "skills/providers/image-generation/openai-gpt-image/SKILL.md"
+        },
+        {
+          "name": "recraft-image-design",
+          "path": "skills/providers/image-generation/recraft-image-design",
+          "entrypoint": "skills/providers/image-generation/recraft-image-design/SKILL.md"
+        },
+        {
+          "name": "runway-image",
+          "path": "skills/providers/image-generation/runway-image",
+          "entrypoint": "skills/providers/image-generation/runway-image/SKILL.md"
+        },
+        {
+          "name": "stability-ai-image",
+          "path": "skills/providers/image-generation/stability-ai-image",
+          "entrypoint": "skills/providers/image-generation/stability-ai-image/SKILL.md"
+        },
+        {
+          "name": "xai-grok-imagine-image",
+          "path": "skills/providers/image-generation/xai-grok-imagine-image",
+          "entrypoint": "skills/providers/image-generation/xai-grok-imagine-image/SKILL.md"
+        },
+        {
+          "name": "amazon-rekognition",
+          "path": "skills/providers/image-understanding/amazon-rekognition",
+          "entrypoint": "skills/providers/image-understanding/amazon-rekognition/SKILL.md"
+        },
+        {
+          "name": "google-cloud-vision",
+          "path": "skills/providers/image-understanding/google-cloud-vision",
+          "entrypoint": "skills/providers/image-understanding/google-cloud-vision/SKILL.md"
+        },
+        {
+          "name": "kling-advanced-lip-sync",
+          "path": "skills/providers/lip-sync/kling-advanced-lip-sync",
+          "entrypoint": "skills/providers/lip-sync/kling-advanced-lip-sync/SKILL.md"
+        },
+        {
+          "name": "sync-labs-lipsync",
+          "path": "skills/providers/lip-sync/sync-labs-lipsync",
+          "entrypoint": "skills/providers/lip-sync/sync-labs-lipsync/SKILL.md"
+        },
+        {
+          "name": "deepmotion-animate-3d",
+          "path": "skills/providers/motion-capture/deepmotion-animate-3d",
+          "entrypoint": "skills/providers/motion-capture/deepmotion-animate-3d/SKILL.md"
+        },
+        {
+          "name": "move-ai-motion-capture",
+          "path": "skills/providers/motion-capture/move-ai-motion-capture",
+          "entrypoint": "skills/providers/motion-capture/move-ai-motion-capture/SKILL.md"
+        },
+        {
+          "name": "ace-step",
+          "path": "skills/providers/music-generation/ace-step",
+          "entrypoint": "skills/providers/music-generation/ace-step/SKILL.md"
+        },
+        {
+          "name": "elevenlabs-music",
+          "path": "skills/providers/music-generation/elevenlabs-music",
+          "entrypoint": "skills/providers/music-generation/elevenlabs-music/SKILL.md"
+        },
+        {
+          "name": "google-lyria",
+          "path": "skills/providers/music-generation/google-lyria",
+          "entrypoint": "skills/providers/music-generation/google-lyria/SKILL.md"
+        },
+        {
+          "name": "minimax-music",
+          "path": "skills/providers/music-generation/minimax-music",
+          "entrypoint": "skills/providers/music-generation/minimax-music/SKILL.md"
+        },
+        {
+          "name": "suno-music",
+          "path": "skills/providers/music-generation/suno-music",
+          "entrypoint": "skills/providers/music-generation/suno-music/SKILL.md"
+        },
+        {
+          "name": "elevenlabs-sound-effects",
+          "path": "skills/providers/sound-generation/elevenlabs-sound-effects",
+          "entrypoint": "skills/providers/sound-generation/elevenlabs-sound-effects/SKILL.md"
+        },
+        {
+          "name": "stable-audio",
+          "path": "skills/providers/sound-generation/stable-audio",
+          "entrypoint": "skills/providers/sound-generation/stable-audio/SKILL.md"
+        },
+        {
+          "name": "audioshake-stem-separation",
+          "path": "skills/providers/source-separation/audioshake-stem-separation",
+          "entrypoint": "skills/providers/source-separation/audioshake-stem-separation/SKILL.md"
+        },
+        {
+          "name": "azure-speech",
+          "path": "skills/providers/speech-and-voice/azure-speech",
+          "entrypoint": "skills/providers/speech-and-voice/azure-speech/SKILL.md"
+        },
+        {
+          "name": "deepgram-speech",
+          "path": "skills/providers/speech-and-voice/deepgram-speech",
+          "entrypoint": "skills/providers/speech-and-voice/deepgram-speech/SKILL.md"
+        },
+        {
+          "name": "elevenlabs-dubbing-voice-conversion",
+          "path": "skills/providers/speech-and-voice/elevenlabs-dubbing-voice-conversion",
+          "entrypoint": "skills/providers/speech-and-voice/elevenlabs-dubbing-voice-conversion/SKILL.md"
+        },
+        {
+          "name": "google-cloud-speech",
+          "path": "skills/providers/speech-and-voice/google-cloud-speech",
+          "entrypoint": "skills/providers/speech-and-voice/google-cloud-speech/SKILL.md"
+        },
+        {
+          "name": "nvidia-speech-nim",
+          "path": "skills/providers/speech-and-voice/nvidia-speech-nim",
+          "entrypoint": "skills/providers/speech-and-voice/nvidia-speech-nim/SKILL.md"
+        },
+        {
+          "name": "openai-audio",
+          "path": "skills/providers/speech-and-voice/openai-audio",
+          "entrypoint": "skills/providers/speech-and-voice/openai-audio/SKILL.md"
+        },
+        {
+          "name": "amazon-transcribe",
+          "path": "skills/providers/speech-to-text/amazon-transcribe",
+          "entrypoint": "skills/providers/speech-to-text/amazon-transcribe/SKILL.md"
+        },
+        {
+          "name": "assemblyai-transcription",
+          "path": "skills/providers/speech-to-text/assemblyai-transcription",
+          "entrypoint": "skills/providers/speech-to-text/assemblyai-transcription/SKILL.md"
+        },
+        {
+          "name": "elevenlabs-scribe",
+          "path": "skills/providers/speech-to-text/elevenlabs-scribe",
+          "entrypoint": "skills/providers/speech-to-text/elevenlabs-scribe/SKILL.md"
+        },
+        {
+          "name": "amazon-polly",
+          "path": "skills/providers/text-to-speech/amazon-polly",
+          "entrypoint": "skills/providers/text-to-speech/amazon-polly/SKILL.md"
+        },
+        {
+          "name": "byteplus-seed-speech-tts",
+          "path": "skills/providers/text-to-speech/byteplus-seed-speech-tts",
+          "entrypoint": "skills/providers/text-to-speech/byteplus-seed-speech-tts/SKILL.md"
+        },
+        {
+          "name": "cartesia-sonic",
+          "path": "skills/providers/text-to-speech/cartesia-sonic",
+          "entrypoint": "skills/providers/text-to-speech/cartesia-sonic/SKILL.md"
+        },
+        {
+          "name": "elevenlabs-tts",
+          "path": "skills/providers/text-to-speech/elevenlabs-tts",
+          "entrypoint": "skills/providers/text-to-speech/elevenlabs-tts/SKILL.md"
+        },
+        {
+          "name": "fish-audio-tts",
+          "path": "skills/providers/text-to-speech/fish-audio-tts",
+          "entrypoint": "skills/providers/text-to-speech/fish-audio-tts/SKILL.md"
+        },
+        {
+          "name": "hume-octave",
+          "path": "skills/providers/text-to-speech/hume-octave",
+          "entrypoint": "skills/providers/text-to-speech/hume-octave/SKILL.md"
+        },
+        {
+          "name": "kokoro-tts",
+          "path": "skills/providers/text-to-speech/kokoro-tts",
+          "entrypoint": "skills/providers/text-to-speech/kokoro-tts/SKILL.md"
+        },
+        {
+          "name": "minimax-speech",
+          "path": "skills/providers/text-to-speech/minimax-speech",
+          "entrypoint": "skills/providers/text-to-speech/minimax-speech/SKILL.md"
+        },
+        {
+          "name": "qwen3-tts",
+          "path": "skills/providers/text-to-speech/qwen3-tts",
+          "entrypoint": "skills/providers/text-to-speech/qwen3-tts/SKILL.md"
+        },
+        {
+          "name": "resemble-chatterbox",
+          "path": "skills/providers/text-to-speech/resemble-chatterbox",
+          "entrypoint": "skills/providers/text-to-speech/resemble-chatterbox/SKILL.md"
+        },
+        {
+          "name": "volcengine-doubao-speech-tts",
+          "path": "skills/providers/text-to-speech/volcengine-doubao-speech-tts",
+          "entrypoint": "skills/providers/text-to-speech/volcengine-doubao-speech-tts/SKILL.md"
+        },
+        {
+          "name": "topaz-video-enhancement",
+          "path": "skills/providers/video-enhancement/topaz-video-enhancement",
+          "entrypoint": "skills/providers/video-enhancement/topaz-video-enhancement/SKILL.md"
+        },
+        {
+          "name": "alibaba-wan-video",
+          "path": "skills/providers/video-generation/alibaba-wan-video",
+          "entrypoint": "skills/providers/video-generation/alibaba-wan-video/SKILL.md"
+        },
+        {
+          "name": "amazon-nova-reel",
+          "path": "skills/providers/video-generation/amazon-nova-reel",
+          "entrypoint": "skills/providers/video-generation/amazon-nova-reel/SKILL.md"
+        },
+        {
+          "name": "google-gemini-omni-video",
+          "path": "skills/providers/video-generation/google-gemini-omni-video",
+          "entrypoint": "skills/providers/video-generation/google-gemini-omni-video/SKILL.md"
+        },
+        {
+          "name": "google-veo",
+          "path": "skills/providers/video-generation/google-veo",
+          "entrypoint": "skills/providers/video-generation/google-veo/SKILL.md"
+        },
+        {
+          "name": "higgsfield-video",
+          "path": "skills/providers/video-generation/higgsfield-video",
+          "entrypoint": "skills/providers/video-generation/higgsfield-video/SKILL.md"
+        },
+        {
+          "name": "kling-video",
+          "path": "skills/providers/video-generation/kling-video",
+          "entrypoint": "skills/providers/video-generation/kling-video/SKILL.md"
+        },
+        {
+          "name": "ltx-2-video",
+          "path": "skills/providers/video-generation/ltx-2-video",
+          "entrypoint": "skills/providers/video-generation/ltx-2-video/SKILL.md"
+        },
+        {
+          "name": "luma-ray-video",
+          "path": "skills/providers/video-generation/luma-ray-video",
+          "entrypoint": "skills/providers/video-generation/luma-ray-video/SKILL.md"
+        },
+        {
+          "name": "midjourney-video",
+          "path": "skills/providers/video-generation/midjourney-video",
+          "entrypoint": "skills/providers/video-generation/midjourney-video/SKILL.md"
+        },
+        {
+          "name": "minimax-hailuo-video",
+          "path": "skills/providers/video-generation/minimax-hailuo-video",
+          "entrypoint": "skills/providers/video-generation/minimax-hailuo-video/SKILL.md"
+        },
+        {
+          "name": "moonvalley-marey",
+          "path": "skills/providers/video-generation/moonvalley-marey",
+          "entrypoint": "skills/providers/video-generation/moonvalley-marey/SKILL.md"
+        },
+        {
+          "name": "nvidia-cosmos-video",
+          "path": "skills/providers/video-generation/nvidia-cosmos-video",
+          "entrypoint": "skills/providers/video-generation/nvidia-cosmos-video/SKILL.md"
+        },
+        {
+          "name": "pika-video",
+          "path": "skills/providers/video-generation/pika-video",
+          "entrypoint": "skills/providers/video-generation/pika-video/SKILL.md"
+        },
+        {
+          "name": "runway-video",
+          "path": "skills/providers/video-generation/runway-video",
+          "entrypoint": "skills/providers/video-generation/runway-video/SKILL.md"
+        },
+        {
+          "name": "seedance-2-0",
+          "path": "skills/providers/video-generation/seedance-2-0",
+          "entrypoint": "skills/providers/video-generation/seedance-2-0/SKILL.md"
+        },
+        {
+          "name": "tencent-hunyuanvideo",
+          "path": "skills/providers/video-generation/tencent-hunyuanvideo",
+          "entrypoint": "skills/providers/video-generation/tencent-hunyuanvideo/SKILL.md"
+        },
+        {
+          "name": "video-generation-gateways",
+          "path": "skills/providers/video-generation/video-generation-gateways",
+          "entrypoint": "skills/providers/video-generation/video-generation-gateways/SKILL.md"
+        },
+        {
+          "name": "vidu-video",
+          "path": "skills/providers/video-generation/vidu-video",
+          "entrypoint": "skills/providers/video-generation/vidu-video/SKILL.md"
+        },
+        {
+          "name": "xai-grok-imagine-video",
+          "path": "skills/providers/video-generation/xai-grok-imagine-video",
+          "entrypoint": "skills/providers/video-generation/xai-grok-imagine-video/SKILL.md"
+        },
+        {
+          "name": "twelvelabs-video-understanding",
+          "path": "skills/providers/video-understanding/twelvelabs-video-understanding",
+          "entrypoint": "skills/providers/video-understanding/twelvelabs-video-understanding/SKILL.md"
+        },
+        {
+          "name": "elevenlabs-agents",
+          "path": "skills/providers/voice-agents/elevenlabs-agents",
+          "entrypoint": "skills/providers/voice-agents/elevenlabs-agents/SKILL.md"
+        },
+        {
+          "name": "gemini-live-audio",
+          "path": "skills/providers/voice-agents/gemini-live-audio",
+          "entrypoint": "skills/providers/voice-agents/gemini-live-audio/SKILL.md"
+        },
+        {
+          "name": "hume-evi",
+          "path": "skills/providers/voice-agents/hume-evi",
+          "entrypoint": "skills/providers/voice-agents/hume-evi/SKILL.md"
+        },
+        {
+          "name": "openai-realtime-voice",
+          "path": "skills/providers/voice-agents/openai-realtime-voice",
+          "entrypoint": "skills/providers/voice-agents/openai-realtime-voice/SKILL.md"
+        },
+        {
+          "name": "odyssey-interactive-video",
+          "path": "skills/providers/world-models/odyssey-interactive-video",
+          "entrypoint": "skills/providers/world-models/odyssey-interactive-video/SKILL.md"
+        },
+        {
+          "name": "world-labs-marble",
+          "path": "skills/providers/world-models/world-labs-marble",
+          "entrypoint": "skills/providers/world-models/world-labs-marble/SKILL.md"
+        }
+      ],
+      "runtime_state": "not_installed_by_manifest"
+    },
+    {
+      "family": "videocut",
+      "repository": "Agentchengfeng/chengfeng-videocut-skills",
+      "commit": "a33b43e08c34fa8beeb5e78498e852f4e80975a5",
+      "license_spdx": "Apache-2.0",
+      "license_files": [
+        "LICENSE",
+        "NOTICE.md",
+        "plugins/chengfeng-videocut/skills/chengfeng-videocut-workbench/LICENSE",
+        "plugins/chengfeng-videocut/skills/chengfeng-videocut-workbench/NOTICE.md"
+      ],
+      "redistributed": false,
+      "modules": [
+        {
+          "name": "chengfeng-check-updates",
+          "path": "plugins/chengfeng-videocut/skills/chengfeng-check-updates",
+          "entrypoint": "plugins/chengfeng-videocut/skills/chengfeng-check-updates/SKILL.md"
+        },
+        {
+          "name": "chengfeng-cut",
+          "path": "plugins/chengfeng-videocut/skills/chengfeng-cut",
+          "entrypoint": "plugins/chengfeng-videocut/skills/chengfeng-cut/SKILL.md"
+        },
+        {
+          "name": "chengfeng-export",
+          "path": "plugins/chengfeng-videocut/skills/chengfeng-export",
+          "entrypoint": "plugins/chengfeng-videocut/skills/chengfeng-export/SKILL.md"
+        },
+        {
+          "name": "chengfeng-report-bug",
+          "path": "plugins/chengfeng-videocut/skills/chengfeng-report-bug",
+          "entrypoint": "plugins/chengfeng-videocut/skills/chengfeng-report-bug/SKILL.md"
+        },
+        {
+          "name": "chengfeng-subtitle",
+          "path": "plugins/chengfeng-videocut/skills/chengfeng-subtitle",
+          "entrypoint": "plugins/chengfeng-videocut/skills/chengfeng-subtitle/SKILL.md"
+        },
+        {
+          "name": "chengfeng-videocut-workbench",
+          "path": "plugins/chengfeng-videocut/skills/chengfeng-videocut-workbench",
+          "entrypoint": "plugins/chengfeng-videocut/skills/chengfeng-videocut-workbench/SKILL.md"
+        },
+        {
+          "name": "chengfeng-visual",
+          "path": "plugins/chengfeng-videocut/skills/chengfeng-visual",
+          "entrypoint": "plugins/chengfeng-videocut/skills/chengfeng-visual/SKILL.md"
+        },
+        {
+          "name": "ian-xiaohei-svg-motion",
+          "path": "plugins/chengfeng-videocut/skills/chengfeng-visual/animation-styles/ian-xiaohei-svg-motion",
+          "entrypoint": "plugins/chengfeng-videocut/skills/chengfeng-visual/animation-styles/ian-xiaohei-svg-motion/SKILL.md"
+        }
+      ],
+      "runtime_state": "not_installed_by_manifest"
+    },
+    {
+      "family": "seedance-2-5",
+      "repository": "Standed/Seedance2.5",
+      "commit": "06e32c4c80ee9b33480fdbd31f2d80e4922871b2",
+      "license_spdx": "MIT",
+      "license_files": [
+        "LICENSE"
+      ],
+      "redistributed": false,
+      "modules": [
+        {
+          "name": "seedance-2-5",
+          "path": ".",
+          "entrypoint": "SKILL.md"
+        }
+      ],
+      "runtime_state": "not_installed_by_manifest"
+    }
+  ],
+  "policy": {
+    "install_runtime": false,
+    "call_providers": false,
+    "paid_fallback": false,
+    "overwrite_existing_cache": false
+  }
+}

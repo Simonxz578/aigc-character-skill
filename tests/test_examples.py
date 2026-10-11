@@ -49,6 +49,8 @@ class ExampleTests(unittest.TestCase):
 
     def test_markdown_local_links_resolve(self):
         for path in ROOT.rglob("*.md"):
+            if any(part in {'.git', '.integrations', 'outputs', 'dist', '.venv'} for part in path.relative_to(ROOT).parts):
+                continue
             for target in re.findall(r"\]\(([^)]+)\)", path.read_text()):
                 if "://" in target or target.startswith("#"):
                     continue

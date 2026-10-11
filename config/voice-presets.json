@@ -1,0 +1,22 @@
+{
+  "source": "Rain v3 working presets; optional examples, not universal character genders",
+  "provider": "VOICEVOX Core 0.17.0",
+  "female": {
+    "style_id": 10,
+    "model": "0.vvm",
+    "credit": "VOICEVOX:雨晴はう",
+    "speed": 1.02,
+    "pitch": 0.006,
+    "intonation": 1.1,
+    "pause_max": 0.22
+  },
+  "male": {
+    "style_id": 11,
+    "model": "4.vvm",
+    "credit": "VOICEVOX:玄野武宏",
+    "speed": 0.94,
+    "pitch": 0,
+    "intonation": 1,
+    "pause_max": 0.15
+  }
+}

@@ -1,70 +1,99 @@
-# AIGC character skill
+# AIGC character skill · 2.0
 
-**说一句人物剧情，得到一份可复制的中文表演 Prompt。**
+**从一句人物剧情到提示词、生成交接和真实视频后期。**
 
-把“她有些委屈”写成有动机的目光、呼吸和动作，把双人互动写成有因果的回应。适合古风、写实、日漫、对话、歌舞与战斗提示词。
+保留1.0的中文表演导演：动机、目光、呼吸、微表情、动作、道具交换、对白与镜头时间轴。新增通用人物视频生产模式，整合《贵妃醉酒》完整MV流程及anime-video-skill的配音、本地视频、连续性和后期经验。
 
-这是 Agent 的**文字角色导演 skill**，不是视频生成模型。它不生成 mp4，不下载权重，也不调用付费 API。最终正文可交给小云雀、Seedance、Kling、Veo、Sora 等平台；实际型号与生成能力需在制作时核实。
+## 这一版有什么
 
-## 安装到 Codex
+- [通用人物视频产品PRD](docs/PRD-character-video-production.md)与[贵妃醉酒制作PRD](docs/PRD-guifei-mv.md)：brief、母版、参考职责、画布、五幕生成/导入、歌曲、字幕、混音、编码、QA与交付。
+- [六套技能统一接入](references/production/integrations.md)：HyperFrames、video-use、Remotion Skills、Generative Media Skills、VideoCut / chengfeng-videocut-skills、专门Seedance2.5技能。完整196个公开模块入口有固定SHA，可按需或全部缓存。
+- 可执行本地配音CLI/MCP：VOICEVOX整句自然声线、时长槽位、原始WAV/query/署名/哈希；[说明](references/production/audio-finishing.md)。
+- loopback-only ComfyUI CLI/MCP：[本地生成与单镜头验收](references/production/local-video.md)，无付费fallback。
+- 参数化FFmpeg后期：定长拼接/CFR、主歌曲或低量自带音轨混合、片头、双语ASS/SRT/确定性烧入、编码后峰值修复、probe/全解码/接触表。
+- [从anime迁移了什么](docs/migration-from-anime.md)；原有10场景、12份中文Prompt和离线检查保留。
 
-需要 Git 和支持本地 skills 的 Codex。确认同名目录不存在后：
+这是制作与编排skill，**不是独立视频生成模型**。有工具和素材时可真正执行后期/本地适配器；Seedance生成仍由可用UI/API执行，外部模型、账号和运行时需分别准备。未验证的人物运动和试听状态不会写成PASS。
+
+## 安装 / 更新
+
+同名目录不存在时：
 
 ```bash
 mkdir -p ~/.codex/skills
 git clone https://github.com/Simonxz578/aigc-character-skill.git ~/.codex/skills/aigc-character-skill
 ```
 
-重新启动/开启新的 Codex 会话，使 skill 被发现；随后用 `$aigc-character-skill` 显式调用，也支持根据描述自动选择。如果已经安装，先检查本地改动，再在安装目录运行 `git pull --ff-only`。自定义 CODEX_HOME 时用该目录下的 `skills/` 替代上述位置。
+已安装时先保留自己的改动，再 `git pull --ff-only`。自定义CODEX_HOME则安装到对应skills目录。开启新会话后用 `$aigc-character-skill`，也支持按任务自动发现。
+
+仅编写Prompt仍只需Python3.9+，无GPU/API。可执行媒体模块要求Python3.10+及本地FFmpeg/ffprobe：
+
+```bash
+cd ~/.codex/skills/aigc-character-skill
+python -m pip install -e '.[render]'
+python scripts/doctor.py
+# 可选MCP包装，SDK是额外依赖：
+python -m pip install -e '.[mcp,render]'
+aigc-character-mcp
+```
+
+MCP以stdio运行，不打印启动横幅。提供 local_voice_health、synthesize_local_voice、local_video_health、submit_local_video、local_video_status；原生声音模型/字典和ComfyUI必须另行准备。Codex配置示例：
+
+```toml
+[mcp_servers.aigc_character_media]
+command = "/absolute/path/to/your/venv/bin/aigc-character-mcp"
+```
+
+## 六套参考能力
+
+```bash
+python3 scripts/integrations.py list
+python3 scripts/integrations.py sync --family seedance-2-5
+python3 scripts/integrations.py resolve --module seedance-2-5
+# 一次取得六套全部已登记公开模块资料：
+python3 scripts/integrations.py sync --family all
+```
+
+缓存保留在本地 `.integrations/sources`，不覆写全局用户skills；只下载固定提交，不执行上游安装器，不调用provider。入口和资料可用不等于CLI/云服务/模型全部运行成功。版本/许可见 [upstream清单](config/upstream-skills.lock.json)与[第三方说明](THIRD_PARTY_NOTICES.md)。
 
 ## 直接这样说
 
-**最短调用**
+> $aigc-character-skill 她听到心上人叫自己的名字，给我一份可复制短词。
 
-> $aigc-character-skill 她听到心上人叫自己的名字，给我一份能直接复制的短词。
+> $aigc-character-skill 用我的贵妃母版和舞蹈参考制作60秒MV，720p 9:16。你准备画布，我点击生成；英文歌词在中文上面，原歌曲不变速。
 
-**详细表演**
+> $aigc-character-skill 五段视频已经生成，按10/10/15/15/10秒合成，片头叠在0–4秒，用原歌曲为主、生成声音低量混入。
 
-> $aigc-character-skill 15秒，古风女子发现友人替她留了回乡船位，但他不能同行。cinematic，含泪不落，不说话。
+> $aigc-character-skill 只修男生不自然的语音，人物、女孩声音、对白内容和画面保留。
 
-**双人场景**
+> $aigc-character-skill 用HyperFrames做导演参考，或沿用我的Remotion工程加可编辑字幕；不要重新生成角色。
 
-> $aigc-character-skill 12秒，湊把捡到的笔记本还给夏帆，化解误会。沿用我上传的男女母版，无字幕。
+> $aigc-character-skill 本地ComfyUI先做4–6秒递笔记本测试，真正运动和身份通过后才批量；不调用付费API。
 
-**局部改写**
+## 后期配置与输出
 
-> $aigc-character-skill 只把下面男生的语气改自然，人物、衣服、女孩台词、镜头和其他句子都保留：……
-
-默认交付 prompt_only 中文正文，不要求填表。standard 通常450–900汉字；concise 180–350；明确要细描才用 cinematic 1100–1700。custom 按字符上限核算，包含空格、标点与换行。七种形式还包含时间轴、对白表演、双人、角色基线、局部修订和 QA。
-
-## 例子
-
-> 8秒写实中近景，女子坐在桌边，对方在右侧画外。0–3秒：解释被打断后，她把抬起的手放回膝上，视线落到空杯，嘴角的礼貌笑渐淡。3–6秒：她抬眼确认对方仍未听，嘴唇轻合，把话留住，肩线保持平稳。6–8秒：完整呼气后重新看向对方，留出继续谈话的余地。镜头固定，无新增台词、字幕或落泪，环境声保持自然。
-
-[10份原创场景 / 12份正文](examples/01-ancient-joy-to-regret.md)，包括两份1200–1700汉字的15秒演示与[同一需求三档长度](examples/04-shy-romance.md)。完整目录位于 `examples/`。
-
-## 离线检查
-
-Python 3.9+，仅标准库，无需 pip install：
+复制 [贵妃配置示例](examples/guifei/production.json)到自己的project目录，按实际文件替换路径，填入基于实际歌曲的字幕并设置有授权的本地字体。相对路径均以配置文件目录为基准。
 
 ```bash
-python3 scripts/validate_prompt.py prompt.txt --duration 15 --max-chars 5000
-python3 scripts/validate_prompt.py prompt.txt --duration 15 --json
-python3 -m unittest discover -s tests -v
+aigc-character-finish project/production.json --dry-run
+aigc-character-finish project/production.json
 ```
 
-输入是 UTF-8 正文；`-` 或不提供路径时读取 stdin。Unicode 字符数计入换行。检查时序覆盖、重叠、字数、重复否定、部分声音/字幕/镜头冲突、对白粗预算和递物链提示。语义 warnings 退出0，输入或参数错误退出2。无 warning 不代表真实视频必定成功；启发式检查可能误报或漏报。
+输出 final.mp4、picture/styled_picture.mp4、mix.wav、ASS/SRT（有字幕时）、render_manifest.json、probe/full-decode日志与接触表。默认不覆盖已有final。用户明确720p优先；新项目未指定时skill建议1080p/30fps。严格ASS直烧用caption_backend=ass；FFmpeg缺少libass时不会伪报成功，auto模式可记录PNG字幕降级。
 
-## 文件与验证
+## 验证与已知边界
 
-v1.0.0本地验收：**44项自动测试 PASS**，skill-creator frontmatter检查通过；完成10组、12次独立自然语言试用。参考未输入的用例只验证文字行为，未验证实际角色相似度；朗诵超时用例验证的是冲突处理。
+```bash
+python3 scripts/validate_prompt.py prompt.txt --duration 15 --max-chars 5000 --json
+PYTHONPATH=src python3 -m unittest discover -s tests -v
+```
 
-- [SKILL.md](SKILL.md)：入口、推断、路由、生成与自查。
-- `agents/openai.yaml`：展示名称与默认调用。
-- `references/`：9份按需读取的导演资料，情绪索引44项。
-- `examples/`：10个独立原创场景，包括三档对比。
-- `scripts/`、`tests/`：可执行检查器、自动测试与[自然语言回归记录](tests/forward-results.md)。
+1.0历史：44项自动测试、10组/12次独立Prompt试用。2.0新增真实短视频渲染回归、强峰值音轨修复、双语字幕/片头、输入边界与本地provider约束。具体本次结果见 [发布验证](docs/release-validation-v2.md)。
 
-使用MIT许可，覆盖本仓库原创文字与代码。仓库不包含用户原截图、逐字转写、照片、视频或声纹素材。结构参考 [Agent Skills 规范](https://agentskills.io/specification) 与 [OpenAI Skills 文档](https://developers.openai.com/plugins/build/skills)，开发使用 skill-creator 指导；不复制外部示例正文。
+贵妃案例的最终历史文件技术通过；歌词少数专名未逐字试听，混音未完成感知试听。[历史QA摘要](examples/guifei/recorded-qa.json)不证明所有生成模型可运行。本地Wan5B未通过人物动画门槛，14B/LTX2.5未实测；Remotion与VideoCut运行时未因此发布而自动通过。
 
-字幕、精确书写文字及原音轨保留应交给确定性后期。已有视频像素级局部修复需要跟踪/遮罩/合成工具，本 skill 不承诺通过文字指令保证这些结果。
+## 文件与许可
+
+入口 [SKILL.md](SKILL.md)保留快速Prompt与生产路由；导演资料在references，生产资料按需加载；源代码在src/aigc_character_media；配置与示例可以直接复用。
+
+MIT覆盖本库原创与迁移的MIT代码。外部196份skill正文按需从原仓库获取并保留其许可，没有重新发行成MIT。用户歌曲、照片、参考演员视频、成片、模型权重和声纹不随源码发布。VOICEVOX音色署名与Remotion使用条款等独立处理。

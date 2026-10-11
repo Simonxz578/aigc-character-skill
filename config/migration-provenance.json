@@ -1,0 +1,25 @@
+{
+  "source_repository": "Simonxz578/anime-video-skill",
+  "source_commit": "788d0148999f481c5c17362ecec6eb2b27685133",
+  "source_version": "0.3.0",
+  "migrated": {
+    "local_voice": "src/anime_knowledge_video/local_voice.py",
+    "local_video": "src/anime_knowledge_video/local_video.py",
+    "io": "src/anime_knowledge_video/io.py"
+  },
+  "adapted_methods": [
+    "native full-sentence voice repair",
+    "single-shot motion acceptance",
+    "CPU/MPS same-input diagnostics",
+    "subtitle/voice line IDs",
+    "deterministic FFmpeg captions and measured QA",
+    "HyperFrames director references",
+    "explicit animatic versus character-motion labels"
+  ],
+  "excluded": [
+    "knowledge topic research planner",
+    "fixed Rain plot or default Japanese language for all projects",
+    "weights, videos, songs, reference photos, absolute personal paths",
+    "placeholder media tools claiming generation"
+  ]
+}

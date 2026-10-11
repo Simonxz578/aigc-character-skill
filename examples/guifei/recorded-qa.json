@@ -1,0 +1,23 @@
+{
+  "technical_pass": true,
+  "duration_s": 60,
+  "resolution": [
+    720,
+    1280
+  ],
+  "fps": 30,
+  "video_frames": 1800,
+  "audio_hz": 48000,
+  "audio_channels": 2,
+  "full_decode_errors": "",
+  "main_song_no_speed_change": true,
+  "source_to_mix_zero_lag_correlation": 0.9999822085507097,
+  "mix_to_final_zero_lag_correlation": 0.9996139136467718,
+  "original_gain_db": -4.609,
+  "generated_gain_db": -27.609,
+  "generated_boundary_fades_s": 0.2,
+  "final_decoded_peak": 0.8787162899971008,
+  "audio_listening_verified": false,
+  "evidence_kind": "sanitized_historical_run_summary_not_new_validation",
+  "no_media_in_repository": true
+}

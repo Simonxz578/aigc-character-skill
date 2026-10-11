@@ -18,3 +18,12 @@ local_trials/
 *.mp4
 *逐字转写*
 *完整开发及GitHub发布Prompt*
+outputs/
+.integrations/
+dist/
+*.egg-info/
+*.wav
+*.mp3
+*.gguf
+*.safetensors
+*.pt
